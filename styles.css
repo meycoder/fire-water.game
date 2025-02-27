@@ -11,19 +11,27 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    flex-direction: column;
 }
 
 .game-container {
     text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .game {
     position: relative;
-    width: 500px;
+    width: 100%;
     height: 300px;
     background-color: #cfcfcf;
     border: 2px solid #000;
-    margin: 20px auto;
+    margin: 20px 0;
 }
 
 .player {
@@ -45,6 +53,63 @@ body {
     left: 400px;
 }
 
-.instructions {
-    margin-top: 20px;
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.controls__fire, .controls__water {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #aaa;
+}
+
+button:active {
+    background-color: #888;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .game {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        height: 200px;
+    }
+
+    .player {
+        width: 25px;
+        height: 25px;
+    }
+
+    .controls button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .controls__fire, .controls__water {
+        gap: 3px;
+    }
 }
