@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.game {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #cfcfcf;
+    border: 2px solid #000;
+    margin: 20px auto;
+}
+
+.player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+#fire {
+    background-color: orange;
+    top: 100px;
+    left: 50px;
+}
+
+#water {
+    background-color: blue;
+    top: 100px;
+    left: 400px;
+}
+
+.instructions {
+    margin-top: 20px;
+}
